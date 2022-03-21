@@ -4,9 +4,10 @@ import SwiftUI
 struct ContentView: View {
     @State var mode: ModeOption.Mode = .none
     
-    @State var info = ModeOption.with {
-        $0.mode = .none
-    }
+    let protoDataURL = URL(
+        fileURLWithPath: "myfile.pbd",
+        relativeTo: FileManager.documentDirectoryURL
+    )
     
     var body: some View {
         VStack {
@@ -22,11 +23,25 @@ struct ContentView: View {
                     .border(Color.red)
             }
             Button {
-                info = ModeOption.with { $0.mode = self.mode }
+                do {
+                    let object = ModeOption.with { $0.mode = self.mode }
+                    let myData = try Data(_: object.serializedData())
+                    try myData.write(to: protoDataURL)
+                    print("Saved To File: \(mode.description)")
+                } catch {
+                    print("Saved To File Failed")
+                }
             } label: { Text("Saved To File") }
             Button {
-                mode = info.mode
-            } label: { Text("Read To File") }
+                do {
+                    let myData = try Data(contentsOf: protoDataURL)
+                    let modeOption = try ModeOption(serializedData: myData)
+                    mode = modeOption.mode
+                    print("Read From File: \(mode.description)")
+                } catch {
+                    print("Read From File Failed")
+                }
+            } label: { Text("Read From File") }
         }
     }
 }

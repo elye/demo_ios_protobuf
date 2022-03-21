@@ -13,6 +13,7 @@
 		3B3292DF27E73DA50029DC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3292DE27E73DA50029DC8C /* Assets.xcassets */; };
 		3B3292E227E73DA50029DC8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3292E127E73DA50029DC8C /* Preview Assets.xcassets */; };
 		3B3292E927E748990029DC8C /* mode_options.pd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3292E827E748990029DC8C /* mode_options.pd.swift */; };
+		3BA8BED727E88ED500D5A09F /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8BED627E88ED500D5A09F /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3B3292DE27E73DA50029DC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B3292E127E73DA50029DC8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B3292E827E748990029DC8C /* mode_options.pd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mode_options.pd.swift; sourceTree = "<group>"; };
+		3BA8BED627E88ED500D5A09F /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		D3E8E13D1D9CBB28080C34BC /* Pods-iOSProtoTransfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProtoTransfer.debug.xcconfig"; path = "Target Support Files/Pods-iOSProtoTransfer/Pods-iOSProtoTransfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		3B3292D927E73DA30029DC8C /* iOSProtoTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8BED527E88EAC00D5A09F /* Extensions */,
 				3B3292DA27E73DA30029DC8C /* iOSProtoTransferApp.swift */,
 				3B3292DC27E73DA30029DC8C /* ContentView.swift */,
 				3B3292DE27E73DA50029DC8C /* Assets.xcassets */,
@@ -84,6 +87,14 @@
 				3B3292E127E73DA50029DC8C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BA8BED527E88EAC00D5A09F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8BED627E88ED500D5A09F /* FileManager.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6754E825581DB02286E5012A /* Frameworks */ = {
@@ -211,6 +222,7 @@
 				3B3292E927E748990029DC8C /* mode_options.pd.swift in Sources */,
 				3B3292DD27E73DA30029DC8C /* ContentView.swift in Sources */,
 				3B3292DB27E73DA30029DC8C /* iOSProtoTransferApp.swift in Sources */,
+				3BA8BED727E88ED500D5A09F /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
