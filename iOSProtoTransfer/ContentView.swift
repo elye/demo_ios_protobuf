@@ -28,6 +28,7 @@ struct ContentView: View {
                     let myData = try Data(_: object.serializedData())
                     try myData.write(to: protoDataURL)
                     print("Saved To File: \(mode.description)")
+                    print("In folder \(protoDataURL)")
                 } catch {
                     print("Saved To File Failed")
                 }
@@ -38,6 +39,7 @@ struct ContentView: View {
                     let modeOption = try ModeOption(serializedData: myData)
                     mode = modeOption.mode
                     print("Read From File: \(mode.description)")
+                    print("In folder \(protoDataURL)")
                 } catch {
                     print("Read From File Failed")
                 }
